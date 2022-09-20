@@ -3,21 +3,26 @@ function [L, U] = LU_Decomposition(A)
     assert(det(A) ~= 0)
     L = zeros(size(A));
     U = zeros(size(A));
-    [L, U] = next(A, 1, L, U, size(A, 1));
+    n = size(A, 1);
+    [L, U] = next(A, L, U, n);
 end
 
-function [L, U] = next(A, i, L, U, n)
-    beta = A(i, i);
-    x = A(i, i+1:n);
-    v = A(i+1:n, i);
-    w = v / beta;
-    L(i,i) = 1;
-    U(i,i) = beta;
-    U(i, i+1:n) = x;
-    L(i+1:n, i) = w;
-    %L_star = 
-    if i == n
+function [L, U] = next(A, L, U, n)
+    if n == 1
+        L(1, 1) = 1;
+        U(1, 1) = A(1,1);
         return
     end
-    [L, U] = next(A, i+1, L, U, n);
+    beta = A(1, 1);
+    x = A(1, 2:n);
+    v = A(2:n, 1);
+    w = v / beta;
+    L(1,1) = 1;
+    U(1,1) = beta;
+    U(1, 2:n) = x;
+    L(2:n, 1) = w;
+    LU_star = A(2:n, 2:n) - w * x;
+    [L1, U1] = next(LU_star, L(2:n, 2:n), U(2:n,2:n), n-1);
+    L(2:n, 2:n) = L1;
+    U(2:n, 2:n) = U1;
 end
