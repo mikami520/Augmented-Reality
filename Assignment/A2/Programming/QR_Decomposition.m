@@ -17,6 +17,7 @@ function [Q, R] = QR_Decomposition(A)
     end
 end
 
+% projection function
 function P = project(u, v)
     P = (dot(v, u) / norm(u)^2) * u;
 end

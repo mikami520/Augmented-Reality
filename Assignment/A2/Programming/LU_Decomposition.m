@@ -7,6 +7,7 @@ function [L, U] = LU_Decomposition(A)
     [L, U] = next(A, L, U, n);
 end
 
+% recursive function
 function [L, U] = next(A, L, U, n)
     if n == 1
         L(1, 1) = 1;
