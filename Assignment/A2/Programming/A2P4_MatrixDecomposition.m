@@ -5,6 +5,7 @@ clear all
 A = randn(5, 4);
 [Q_package, R_package] = qr(A, 'econ');
 [Q_mine, R_mine] = QR_Decomposition(A);
+%% Verification of 4.1
 % compute the norm of difference between estimated A'=Q*R and true input A
 disp("norm of difference between estimated A'=Q*R and true input A:")
 disp(norm(Q_mine*R_mine - A))
@@ -21,6 +22,7 @@ B = randn(6);
 C = P_package * B;
 [L_package, U_package] = lu(C);
 [L_mine, U_mine] = LU_Decomposition(C);
+%% Verification of 4.2
 % compute the norm of difference between estimated C'=Q*R and true input C
 disp("norm of difference between estimated C'=L*U and true input C:")
 disp(norm(L_mine*U_mine - C))
