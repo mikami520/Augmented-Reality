@@ -48,6 +48,7 @@ for i=1:length(X)
         fprintf('test H_ATA on point %d is wrong !\n', i);
     end
 end
+
 %% Verification of problem 5(b)
 for i=1:length(X)
     x = X(i, :);
