@@ -1,8 +1,8 @@
 # EN.601.454/654 Augmented Reality
 ## Assignment 1
-Name: Yuliang Xiao
-JHED: yxiao39
-Date: 09/13/2022
+Name: Yuliang Xiao\
+JHED: yxiao39\
+Date: 09/13/2022\
 Unity Version: 2021.3.9f1 MacOS M1 (LTS)
 
 ### Contents
