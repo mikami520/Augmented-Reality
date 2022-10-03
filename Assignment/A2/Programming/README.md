@@ -1,9 +1,9 @@
 # EN.601.454/654 Augmented Reality
 ## Assignment 2
 
-**Name: Yuliang Xiao**
-**JHED: yxiao39**
-**Date: 09/25/2022**
+**Name: Yuliang Xiao**\
+**JHED: yxiao39**\
+**Date: 09/25/2022**\
 **Programming Platform: MATLAB R2022a**
 
 ### Contents
